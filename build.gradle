@@ -48,6 +48,13 @@ dependencies {
     compile "org.grails.plugins:views-json-templates"
     compile "org.grails.plugins:views-markup"
     compile "org.grails.plugins:mongodb"
+    compile "org.slf4j:slf4j-api:1.7.22"
+    // compile ('org.grails.plugins:logback:0.3.1') {
+    //     exclude(module:'slf4j-api')
+    // }
+    // compile ('ch.qos.logback:logback-classic:1.1.1') {
+    //     exclude(module:'slf4j-api')
+    // }
     console "org.grails:grails-console"
     profile "org.grails.profiles:web"
     provided "org.grails.plugins:embedded-mongodb:1.0.1"
@@ -67,3 +74,8 @@ assets {
     minifyJs = true
     minifyCss = true
 }
+
+// configurations {
+//      all*.exclude group: 'org.grails', module: 'grails-plugin-log4j'
+//      all*.exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+// }
